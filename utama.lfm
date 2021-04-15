@@ -1,0 +1,288 @@
+object Form1: TForm1
+  Left = 302
+  Height = 599
+  Top = 32
+  Width = 968
+  Caption = 'Pengolahan Foto Sederhana'
+  ClientHeight = 579
+  ClientWidth = 968
+  Menu = MainMenu1
+  OnShow = FormShow
+  LCLVersion = '2.0.6.0'
+  object ScrollBox1: TScrollBox
+    Left = 24
+    Height = 424
+    Top = 56
+    Width = 936
+    HorzScrollBar.Page = 915
+    VertScrollBar.Page = 403
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ClientHeight = 403
+    ClientWidth = 915
+    ParentFont = False
+    TabOrder = 0
+    object Image1: TImage
+      Left = 32
+      Height = 424
+      Top = 88
+      Width = 512
+      AutoSize = True
+    end
+    object Image2: TImage
+      Left = 776
+      Height = 424
+      Top = 88
+      Width = 512
+      AutoSize = True
+    end
+    object Label3: TLabel
+      Left = 259
+      Height = 25
+      Top = 56
+      Width = 47
+      Caption = 'LOAD'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -19
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 1008
+      Height = 25
+      Top = 56
+      Width = 62
+      Caption = 'RESULT'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -19
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 651
+      Height = 1
+      Top = 15
+      Width = 1
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -24
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Edit1: TEdit
+    Left = 840
+    Height = 23
+    Top = 488
+    Width = 33
+    Anchors = [akLeft, akBottom]
+    Enabled = False
+    ParentFont = False
+    TabOrder = 1
+    Text = '127'
+    Visible = False
+  end
+  object Button: TButton
+    Left = 885
+    Height = 25
+    Top = 485
+    Width = 75
+    Anchors = [akLeft, akBottom]
+    Caption = 'Biner'
+    OnClick = ButtonClick
+    ParentFont = False
+    TabOrder = 2
+    Visible = False
+  end
+  object Panel1: TPanel
+    Left = 24
+    Height = 80
+    Top = 485
+    Width = 808
+    Anchors = [akLeft, akBottom]
+    BorderWidth = 2
+    ClientHeight = 80
+    ClientWidth = 808
+    ParentFont = False
+    TabOrder = 3
+    object TrackBar1: TTrackBar
+      Left = 8
+      Height = 25
+      Top = 8
+      Width = 720
+      OnChange = TrackBar1Change
+      Position = 0
+      Anchors = [akLeft, akBottom]
+      Color = clGradientActiveCaption
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+      Visible = False
+    end
+    object TrackBar2: TTrackBar
+      Left = 8
+      Height = 25
+      Top = 50
+      Width = 556
+      OnChange = TrackBar2Change
+      Position = 0
+      Anchors = [akLeft, akBottom]
+      ParentFont = False
+      TabOrder = 1
+      Visible = False
+    end
+    object Label1: TLabel
+      Left = 736
+      Height = 15
+      Top = 8
+      Width = 34
+      Anchors = [akLeft, akBottom]
+      Caption = 'Label1'
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+    end
+  end
+  object Edit2: TEdit
+    Left = 840
+    Height = 23
+    Top = 541
+    Width = 33
+    Anchors = [akLeft, akBottom]
+    Enabled = False
+    ParentFont = False
+    TabOrder = 4
+    Text = '2'
+    Visible = False
+  end
+  object Label2: TLabel
+    Left = 760
+    Height = 15
+    Top = 541
+    Width = 34
+    Anchors = [akLeft, akBottom]
+    Caption = 'Label2'
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object MainMenu1: TMainMenu
+    left = 32
+    top = 8
+    object Menu1: TMenuItem
+      Caption = 'File'
+      object MenuSave: TMenuItem
+        Caption = 'Save Result'
+        OnClick = MenuSaveClick
+      end
+      object MenuLoad: TMenuItem
+        Caption = 'Load Picture'
+        OnClick = MenuLoadClick
+      end
+      object MenuExit: TMenuItem
+        Caption = 'Exit'
+        OnClick = MenuExitClick
+      end
+    end
+    object Mode: TMenuItem
+      Caption = 'Mode'
+      object MenuWarna: TMenuItem
+        Caption = 'Warna'
+        OnClick = MenuWarnaClick
+      end
+      object MenuGray: TMenuItem
+        Caption = 'Grayscale'
+        OnClick = MenuGrayClick
+      end
+      object MenuItem2: TMenuItem
+        Caption = '-'
+      end
+      object MenuBinerisasi: TMenuItem
+        Caption = 'Binerisasi'
+        object MenuBinerBlack: TMenuItem
+          Caption = 'Biner Black White'
+          OnClick = MenuBinerBlackClick
+        end
+        object MenuBinerRed: TMenuItem
+          Caption = 'Biner Red'
+          OnClick = MenuBinerRedClick
+        end
+        object MenuBinerGreen: TMenuItem
+          Caption = 'Biner Green'
+          OnClick = MenuBinerGreenClick
+        end
+        object MenuBinerBlue: TMenuItem
+          Caption = 'Biner Blue'
+          OnClick = MenuBinerBlueClick
+        end
+      end
+      object MenuMonochrome: TMenuItem
+        Caption = 'Monochrome'
+        object MenuMonoRed: TMenuItem
+          Caption = 'Monochrome Red'
+          OnClick = MenuMonoRedClick
+        end
+        object MenuMonoGreen: TMenuItem
+          Caption = 'Monochrome Green'
+          OnClick = MenuMonoGreenClick
+        end
+        object MenuMonoBlue: TMenuItem
+          Caption = 'Monochrome Blue'
+          OnClick = MenuMonoBlueClick
+        end
+      end
+    end
+    object Pengaturan: TMenuItem
+      Caption = 'Pengaturan'
+      object MenuKecerahan: TMenuItem
+        Caption = 'Kecerahan'
+        OnClick = MenuKecerahanClick
+      end
+      object MenuKontras: TMenuItem
+        Caption = 'Kontras'
+        OnClick = MenuKontrasClick
+      end
+      object MenuInvers: TMenuItem
+        Caption = 'Invers'
+        OnClick = MenuInversClick
+      end
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Proses'
+      object Sharpening: TMenuItem
+        Caption = 'Sharpening'
+        OnClick = SharpeningClick
+      end
+      object Smoothing: TMenuItem
+        Caption = 'Smoothing'
+        OnClick = SmoothingClick
+      end
+      object MenuSketsa: TMenuItem
+        Caption = 'Sketsa Foto'
+        OnClick = MenuSketsaClick
+      end
+    end
+    object About: TMenuItem
+      Caption = 'About'
+      OnClick = AboutClick
+    end
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    left = 104
+    top = 8
+  end
+  object SavePictureDialog1: TSavePictureDialog
+    left = 168
+    top = 8
+  end
+end
